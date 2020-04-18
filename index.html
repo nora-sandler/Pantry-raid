@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pantry Raid API App</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pantry Raid: Find Recipes with Ingredients in your Pantry</h1>
+
+        <form>
+            <label for="ingredients">Enter in one or more ingredients, separated by commas</label>
+            <input name="ingredients" type="text" class="js-search-term" placeholder="apples, bananas" required>
+
+            <label for="max-results">Maximum results to return</label>
+            <input type="number" name="max-results" class="js-max-results" value="10" min="1" max="50">
+
+            <input type="submit" value="Find Recipes">
+        </form>
+        <p id="js-error-message" class="error-message"></p>
+        <section class="results hidden">
+            <h2>Here are the recipes!</h2>
+            <div class="results-js"></div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
