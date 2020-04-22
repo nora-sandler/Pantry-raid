@@ -7,8 +7,32 @@
   }
   
   .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
+  }
+
+  .displayRecipes {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .top {
+    display: inline-flex;
+    vertical-align: bottom;
+  }
+
+  .displayRecipes h3 {
+    vertical-align: top;
+  }
+
+  .displayRecipes img {
+    max-width: 100px;
+  }
+
+  .displayRecipes button {
+    margin-top: 15px;
+    float: right;
+
   }
   
   .hidden {
