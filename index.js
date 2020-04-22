@@ -23,8 +23,10 @@ function displayResults(responseJson) {
             `<div class='displayRecipes'>
             <img class='top' src='${responseJson[i].image}'>
             <h3 class='top'>${responseJson[i].title}</h3>
+            <div class='buttons'>
             <button class = 'info' data-id="${responseJson[i].id}">Get More Info</button>
             <button class = 'video' data-title="${responseJson[i].title}">Get Video</button>
+            </div>
             <hr></div>`
         )
     };
