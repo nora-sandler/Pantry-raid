@@ -20,10 +20,12 @@ function displayResults(responseJson) {
     // iterate through the items array
     for (let i = 0; i < responseJson.length; i++) {
         $('.results-js').append(
-            `<h3>${responseJson[i].title}</h3>
+            `<div class='displayRecipes'>
+            <img class='top' src='${responseJson[i].image}'>
+            <h3 class='top'>${responseJson[i].title}</h3>
             <button class = 'info' data-id="${responseJson[i].id}">Get More Info</button>
             <button class = 'video' data-title="${responseJson[i].title}">Get Video</button>
-        <hr>`
+            <hr></div>`
         )
     };
     //display the results section  
