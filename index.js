@@ -31,8 +31,6 @@ function displayResults(responseJson) {
                 $(`.missed-ingredients-${responseJson[i].id}`).append(
                         `<li class='missed-ingredient-item'>${responseJson[i].missedIngredients[n].name}</li>`);
             }
-        
-        
             $('.results-js').append(
                 `</ul></div>
                 <button class = 'info' data-id="${responseJson[i].id}">Get More Info</button>
