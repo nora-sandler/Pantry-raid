@@ -33,14 +33,14 @@ function displayResults(responseJson) {
             }
             $('.results-js').append(
                 `</ul></div>
+                </div>
+                <div class='buttons'>
                 <button class = 'info' data-id="${responseJson[i].id}">Get More Info</button>
                 <button class = 'video' data-title="${responseJson[i].title}">Get Video</button>
                 <hr></div>`
             );
         }
     }
-
-    
     //display the results section  
     $('.results').removeClass('hidden');
 }
