@@ -1,3 +1,8 @@
+/*
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
 * {
   box-sizing: border-box;
 }
@@ -5,7 +10,6 @@
 body {
   background-image: url('background-img.jpg');
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
@@ -38,9 +42,15 @@ label {
   justify-content: space-between;
 }
 
+.title {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 50px;
+}
+
 .top {
   display: inline-flex;
   vertical-align: bottom;
+  font-family: 'Oswald', sans-serif;
 }
 
 .displayRecipes h3 {
