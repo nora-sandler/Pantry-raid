@@ -10,7 +10,6 @@ font-family: 'Open Sans', sans-serif;
 body {
   background-image: url('background-img.jpg');
   background-size: cover;
-  text-align: center;
 }
 
 .container {
@@ -45,6 +44,7 @@ label {
 .title {
   font-family: 'Fredericka the Great', cursive;
   font-size: 50px;
+  text-align: center;
 }
 
 .top {
