@@ -3,13 +3,34 @@
 }
 
 body {
+  background-image: url('background-img.jpg');
+  background-size: cover;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
+  background: rgba(0, 0, 0, 0.75);
 }
+
+ 
+h1 {
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+}
+
+label {
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  color: white;
+}
+
 
 .displayRecipes {
   display: inline-block;
