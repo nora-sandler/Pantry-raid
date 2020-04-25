@@ -22,23 +22,32 @@ function displayResults(responseJson) {
         if (responseJson[i].missedIngredientCount > 0){
             $('.results-js').append(
                 `<div class='displayRecipes'>
-                <img class='top' src='${responseJson[i].image}'>
-                <h3 class='top'>${responseJson[i].title}</h3>
-                <div class = 'missed-ingredients-${responseJson[i].id}'>
-                <h3 class = 'missed-ingredients-title'>Missed ingredients:</h3>
-                <ul>`);
-            for (let n = 0; n < responseJson[i].missedIngredients.length; n++) {
-                $(`.missed-ingredients-${responseJson[i].id}`).append(
+                    <img class='top' src='${responseJson[i].image}'>
+                    <h3 class='top'>${responseJson[i].title}</h3>
+                    <div class = 'missed-ingredients missed-ingredients-${responseJson[i].id}'>
+                        <h3 class = 'missed-ingredients-title'>Missed ingredients</h3>
+                        <ul>`);
+                    for (let n = 0; n < responseJson[i].missedIngredients.length; n++) {
+                        $(`.missed-ingredients-${responseJson[i].id}`).append(
                         `<li class='missed-ingredient-item'>${responseJson[i].missedIngredients[n].name}</li>`);
-            }
+                    }
             $('.results-js').append(
-                `</ul></div>
-                </div>
-                <div class='buttons'>
-                <button class = 'info' data-id="${responseJson[i].id}">Get More Info</button>
-                <button class = 'video' data-title="${responseJson[i].title}">Get Video</button>
-                <hr></div>`
-            );
+                        `</ul>
+                    </div>
+                    <button class = 'info' data-id="${responseJson[i].id}">Get More Info</button>
+                    <button class = 'video' data-title="${responseJson[i].title}">Get Video</button>
+                    <hr>
+                </div>`);
+        }
+        else {
+            $('.results-js').append(
+                `<div class='displayRecipes'>
+                    <img class='top' src='${responseJson[i].image}'>
+                    <h3 class='top'>${responseJson[i].title}</h3>
+                    <button class = 'info' data-id="${responseJson[i].id}">Get More Info</button>
+                    <button class = 'video' data-title="${responseJson[i].title}">Get Video</button>
+                    <hr>
+                </div>`);
         }
     }
     //display the results section  
