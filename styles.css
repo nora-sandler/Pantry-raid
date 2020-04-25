@@ -3,8 +3,10 @@ font-family: 'Fredericka the Great', cursive;
 font-family: 'Oswald', sans-serif;
 font-family: 'Open Sans', sans-serif;
 */
+
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -16,8 +18,23 @@ body {
   max-width: 800px;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.75);
+  padding-bottom:10px;
+
 }
 
+p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: whitesmoke;
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  letter-spacing: 0.15rem;
+}
+form {
+  text-align: center;
+}
  
 h1 {
   font-weight: bolder;
@@ -28,10 +45,23 @@ h1 {
   
 }
 
-label {
+h2 {
   font-weight: bolder;
   letter-spacing: 0.15rem;
   color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 10px;
+}
+
+label {
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: whitesmoke;
+  padding-left: 10px;
 }
 
 
@@ -43,7 +73,7 @@ label {
 
 .title {
   font-family: 'Fredericka the Great', cursive;
-  font-size: 50px;
+  font-size: 85px;
   text-align: center;
 }
 
@@ -53,18 +83,90 @@ label {
   font-family: 'Oswald', sans-serif;
 }
 
-.displayRecipes h3 {
+.displayRecipes h3.top {
   vertical-align: top;
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  color: palevioletred;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 10px;
+  
 }
+
+h3 {
+  vertical-align: top;
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  color:rgba(47, 231, 255, 0.562);
+  padding-top: 2rem;
+  padding-left: 20px;
+}
+
 
 .displayRecipes img {
-  max-width: 100px;
+  max-width: 300px;
+  padding-left: 20px;
+}
+ul{
+  padding-top: -2rem;
+  
 }
 
+li { 
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  color: rgba(255, 255, 0, 0.747);
+  padding-left: 20px;
+  padding-bottom: 2px;
+  
+}
+
+
 .buttons {
+  
   margin-top: 10px;
+  width: 100%;
+  padding-left: 20px;
+ 
 }
 
 .hidden {
   display: none;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }

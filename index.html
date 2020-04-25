@@ -14,12 +14,14 @@
 <body>
     <div class="container">
         <h1 class='title' >Pantry Raid</h1>
+        <p>This app allows you to search for a recipe by entering one or more ingredients you have in your fridge or pantry. 
+            You will be able to see recipe step by step and have video recipe! Sounds cool, right? </p>
 
         <form>
             <label for="ingredients">Enter in one or more ingredients, separated by commas</label>
             <input name="ingredients" type="text" class="js-search-term" placeholder="apples, bananas" required>
 
-            <label for="max-results">Maximum results to return</label>
+            <label for="max-results">Maximum results:</label>
             <input type="number" name="max-results" class="js-max-results" value="10" min="1" max="50">
 
             <input type="submit" value="Find Recipes">

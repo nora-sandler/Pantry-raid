@@ -25,7 +25,7 @@ function displayResults(responseJson) {
                 <img class='top' src='${responseJson[i].image}'>
                 <h3 class='top'>${responseJson[i].title}</h3>
                 <div class = 'missed-ingredients-${responseJson[i].id}'>
-                <h3 class = 'missed-ingredients-title'>Missed ingredients</h3>
+                <h3 class = 'missed-ingredients-title'>Missed ingredients:</h3>
                 <ul>`);
             for (let n = 0; n < responseJson[i].missedIngredients.length; n++) {
                 $(`.missed-ingredients-${responseJson[i].id}`).append(
