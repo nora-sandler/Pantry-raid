@@ -93,19 +93,16 @@ label {
 
 .top {
   display: inline-flex;
-  vertical-align: bottom;
   font-family: 'Oswald', sans-serif;
+  font-size: 15px;
 }
 
 .displayRecipes h3.top {
   vertical-align: top;
   font-weight: bolder;
-  letter-spacing: 0.15rem;
   color: palevioletred;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   padding-left: 10px;
-  
+  text-align: right;
 }
 
 h3 {
