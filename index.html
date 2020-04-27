@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pantry Raid API App</title>
-    <link rel="shortcut icon" href="">
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,10 +18,10 @@
 
         <form>
             <label for="ingredients">Enter in one or more ingredients, separated by commas</label>
-            <input name="ingredients" type="text" class="js-search-term" placeholder="apples, bananas" autofocus required>
+            <input id="ingredients" type="text" class="js-search-term" placeholder="apples, bananas" autofocus required>
             <br>
             <label for="max-results">Maximum results:</label>
-            <input type="number" name="max-results" class="js-max-results" value="10" min="1" max="50">
+            <input type="number" id="max-results" class="js-max-results" value="10" min="1" max="50">
 
             <input type="submit" value="Find Recipes">
         </form>
