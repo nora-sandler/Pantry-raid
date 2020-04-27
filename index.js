@@ -1,10 +1,18 @@
 'use strict';
-
+/*
 const apiKey = '6a8f8872dfcd40a3801e7a331e543a53';
 const youtubeKey = 'AIzaSyDHuEVNKKo0zxsLdo7ghUFrh0yIi6tdc-I';
 const searchURL = 'https://api.spoonacular.com/recipes/findByIngredients';
 const recipeInfoURL = 'https://api.spoonacular.com/recipes/'; //{id}/information + apiKey
 const youtubeURL = 'https://www.googleapis.com/youtube/v3/search';
+*/
+const STORE = {
+    apiKey: '6a8f8872dfcd40a3801e7a331e543a53',
+    youtubeKey: 'AIzaSyDHuEVNKKo0zxsLdo7ghUFrh0yIi6tdc-I',
+    searchURL: 'https://api.spoonacular.com/recipes/findByIngredients',
+    recipeInfoURL: 'https://api.spoonacular.com/recipes/',
+    youtubeURL: 'https://www.googleapis.com/youtube/v3/search'
+}
 
 function formatQueryParams(params) {
     const queryItems = Object.keys(params)
@@ -16,7 +24,7 @@ function displayResults(responseJson) {
     // if there are previous results, remove them
     $('#js-error-message').html('');
     $('.results-js').html('');
-    console.log(responseJson);
+    //console.log(responseJson);
     // iterate through the items array
     for (let i = 0; i < responseJson.length; i++) {
         if (responseJson[i].missedIngredientCount > 0){
@@ -56,9 +64,9 @@ function displayResults(responseJson) {
 }
 
 function getRecipeVideo(recipeName) {
-    const videoURL = youtubeURL + '?part=snippet&maxResults=1&type=video&' + `q=${recipeName}&key=` + youtubeKey;
+    const videoURL = STORE.youtubeURL + '?part=snippet&maxResults=1&type=video&' + `q=${recipeName}&key=` + STORE.youtubeKey;
 
-    console.log(videoURL);
+    //console.log(videoURL);
 
     fetch(videoURL)
         .then(response => {
@@ -74,9 +82,9 @@ function getRecipeVideo(recipeName) {
 }
 
 function getRecipeInfo(recipeId) {
-    const infoURL = recipeInfoURL + recipeId + '/information?apiKey=' + apiKey;
+    const infoURL = STORE.recipeInfoURL + recipeId + '/information?apiKey=' + STORE.apiKey;
 
-    console.log(infoURL);
+    //console.log(infoURL);
 
     fetch(infoURL)
         .then(response => {
@@ -96,19 +104,19 @@ function openInfoWindow(data) {
 }
 
 function openVideoWindow(video) {
-    console.log(video.items[0].id.videoId);
+    //console.log(video.items[0].id.videoId);
     window.open('https://www.youtube.com/watch?v=' + video.items[0].id.videoId, '_blank')
 }
 
 function getRecipes(items, number = 10) {
     const params = {
-        apiKey: apiKey,
+        apiKey: STORE.apiKey,
         ingredients: items,
         number
     };
     const queryString = formatQueryParams(params)
-    const url = searchURL + '?' + queryString;
-    console.log(url);
+    const url = STORE.searchURL + '?' + queryString;
+    //console.log(url);
 
     fetch(url)
         .then(response => {
