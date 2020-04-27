@@ -11,7 +11,8 @@ font-family: 'Open Sans', sans-serif;
 
 body {
   background-image: url('background-img.jpg');
-  background-size: cover;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
   display: flex;
   font-family: 'Open Sans', sans-serif;
   color: white;
